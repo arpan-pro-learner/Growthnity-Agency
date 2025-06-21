@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  height: auto;
+}
+
+body {
+  @apply bg-primary text-white;
+  font-family: "Montserrat", sans-serif;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Hide cursor when custom cursor is active */
+@media (min-width: 1024px) {
+  * {
+    cursor: none important;
+  }
+}
+
+/* For mobile devices where custom cursor won't work well */
+@media (max-width: 1023px) {
+  .cursor {
+    display: none !important;
+  }
+}
+
+/* Smooth scrolling */
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Highlight color */
+::selection {
+  @apply bg-accent-green text-primary;
+}
