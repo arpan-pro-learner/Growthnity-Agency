@@ -6,7 +6,7 @@ const FloatingButton: React.FC = () => {
         <div className='fixed z-50 flex bottom-5 right-5 rounded-full bg-green-500 hover:bg-green-600 p-2 md:p-4 shadow-xl'>
             {/* WhatsApp Share */}
             <Link
-                to={`https://wa.me/6394958577?text=Hello,%20this%20is%20a%20message%20from%20Growthnity.`}
+                to={`https://wa.me/9696723190?text=Hello%2C%20I%27m%20ready%20to%20scale%20my%20business.%20Let%27s%20talk%20about%20what%20Growthnity%20can%20do%20for%20me.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-7 md:h-11 w-7 md:w-11 text-white"

@@ -116,8 +116,8 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-1">Email Us</h3>
-                    <a href="mailto:hello@growthnity.com" className="text-gray-300 hover:text-accent-green transition-colors">
-                      hello@growthnity.com
+                    <a href="mailto:growthnity@gmail.com" className="text-gray-300 hover:text-accent-green transition-colors">
+                      growthnity@gmail.com
                     </a>
                   </div>
                 </div>
@@ -128,8 +128,8 @@ const ContactPage: React.FC = () => {
                   </div>
                   <div>
                     <h3 className="text-white font-medium mb-1">WhatsApp</h3>
-                    <a href="https://wa.me/919876543210" className="text-gray-300 hover:text-accent-green transition-colors">
-                      +91 98765 43210
+                    <a href="https://wa.me/9696723190" className="text-gray-300 hover:text-accent-green transition-colors">
+                      +91 96967 23190
                     </a>
                   </div>
                 </div>
@@ -247,7 +247,7 @@ const ContactPage: React.FC = () => {
             <div className="w-full h-[400px] bg-primary-dark rounded-lg flex items-center justify-center">
               <iframe
                 title="Google Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.953432979859!2d-122.08424908469285!3d37.4219999798257!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb0caa7c9c56f%3A0xf449e48a8e2e0e1e!2sGoogleplex!5e0!3m2!1sen!2sus!4v1687538881111!5m2!1sen!2sus"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.619255961445!2d80.87762258735563!3d26.852059802587835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfe6c7c010de9%3A0xb94baa48c0d30de3!2sBawali%20Police%20Chowki!5e0!3m2!1sen!2sin!4v1751368005945!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
@@ -261,7 +261,7 @@ const ContactPage: React.FC = () => {
 
           <div className="mt-8 text-center">
             <p className="text-gray-300">
-              123, Infinity Tower, Digital Street, Web City, Tech Hub, 560001
+              {/* 123, Infinity Tower, Digital Street, Web City, Tech Hub, 560001 */}
             </p>
           </div>
         </div>

@@ -16,16 +16,16 @@ const Footer: React.FC = () => {
               We don't just take you online. We take you to infinity.
             </p>
             <div className="flex space-x-4 mt-6">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-green transition-colors">
+              <a href="https://www.instagram.com/agency.growthnity/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-green transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-green transition-colors">
+              {/* <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-green transition-colors">
                 <Twitter size={20} />
-              </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-green transition-colors">
+              </a> */}
+              {/* <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-accent-green transition-colors">
                 <Linkedin size={20} />
-              </a>
-              <a href="mailto:hello@growthnity.com" className="text-gray-400 hover:text-accent-green transition-colors">
+              </a> */}
+              <a href="mailto:growthnity@gmail.com" className="text-gray-400 hover:text-accent-green transition-colors">
                 <Mail size={20} />
               </a>
             </div>
@@ -75,19 +75,19 @@ const Footer: React.FC = () => {
             <h3 className="text-white text-lg  font-medium mb-6">Contact</h3>
             <ul className="space-y-4">
               <li className="text-gray-300">
-                <a href="mailto:hello@growthnity.com" className="hover:text-accent-green transition-colors">
-                  hello@growthnity.com
+                <a href="mailto:growthnity@gmail.com" className="hover:text-accent-green transition-colors">
+                  growthnity@gmail.com
                 </a>
               </li>
               <li className="text-gray-300">
-                <a href="tel:+919876543210" className="hover:text-accent-green transition-colors">
-                  +91 98765 43210
+                <a href="tel:+919696723190" className="hover:text-accent-green transition-colors">
+                  +91 96967 23190
                 </a>
               </li>
               <li className="text-gray-300">
-                123, Infinity Tower<br />
-                Digital Street, Web City<br />
-                Tech Hub, 560001
+                363/191 Hasanganj<br />
+                Behind Bawli Chowki<br />
+                Lucknow, 226017
               </li>
             </ul>
           </div>
