@@ -8,6 +8,7 @@ import HeroSection from '../components/sections/HeroSection';
 import ServiceCard from '../components/ui/ServiceCard';
 import ProjectCard from '../components/ui/ProjectCard';
 import ContactCTA from '../components/sections/ContactCTA';
+import FloatingButton from '../components/ui/FloatingButton';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -71,54 +72,55 @@ const HomePage: React.FC = () => {
   const projectsRef = useRef<HTMLDivElement>(null);
 
 
-useEffect(() => {
-  const timeout = setTimeout(() => {
-    if (servicesRef.current) {
-      gsap.from('.service-card', {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: servicesRef.current,
-          start: "top 80%",
-        }
-      });
-    }
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      if (servicesRef.current) {
+        gsap.from('.service-card', {
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: servicesRef.current,
+            start: "top 80%",
+          }
+        });
+      }
 
-    if (projectsRef.current) {
-      gsap.from('.project-card', {
-        y: 50,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: projectsRef.current,
-          start: "top 80%",
-        }
-      });
-    }
+      if (projectsRef.current) {
+        gsap.from('.project-card', {
+          y: 50,
+          opacity: 0,
+          duration: 0.8,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: projectsRef.current,
+            start: "top 80%",
+          }
+        });
+      }
 
-    ScrollTrigger.refresh();
-  }, 0); // Ensures DOM is fully rendered
+      ScrollTrigger.refresh();
+    }, 0); // Ensures DOM is fully rendered
 
-  return () => clearTimeout(timeout);
-}, []);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div>
       <HeroSection />
-      
+      <FloatingButton />
+
       {/* Services Section */}
-      <section 
+      <section
         ref={servicesRef}
         className="py-20 md:py-28 bg-gradient-to-b from-primary to-primary-dark relative"
       >
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary-white/100 pointer-events-none"></div>
         <div className="container mx-auto px-4 md:px-6 relative z-10">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -133,33 +135,33 @@ useEffect(() => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service) => (
-              <ServiceCard 
-                key={service.id} 
-                service={service} 
+              <ServiceCard
+                key={service.id}
+                service={service}
                 className="service-card"
               />
             ))}
           </div>
 
           <div className="text-center mt-12">
-            <Link 
-              to="/services" 
+            <Link
+              to="/services"
               className="inline-flex items-center text-accent-green hover:text-accent-green/90 transition-colors font-medium group"
             >
-              Explore All Services 
+              Explore All Services
               <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
       </section>
-      
+
       {/* Projects Section */}
-      <section 
+      <section
         ref={projectsRef}
         className="py-20 md:py-28 bg-primary-light"
       >
         <div className="container mx-auto px-4 md:px-6">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
@@ -174,8 +176,8 @@ useEffect(() => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project) => (
-              <ProjectCard 
-                key={project.id} 
+              <ProjectCard
+                key={project.id}
                 project={project}
                 className="project-card"
               />
@@ -183,8 +185,8 @@ useEffect(() => {
           </div>
 
           <div className="text-center mt-12">
-            <Link 
-              to="/projects" 
+            <Link
+              to="/projects"
               className="inline-flex items-center text-accent-blue hover:text-accent-blue/90 transition-colors font-medium group"
             >
               View All Projects
@@ -193,7 +195,7 @@ useEffect(() => {
           </div>
         </div>
       </section>
-      
+
       {/* Contact CTA Section */}
       <ContactCTA />
     </div>
